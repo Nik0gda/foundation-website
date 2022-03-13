@@ -1,60 +1,54 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Script from "next/script";
-import { useEffect, useState } from "react";
-import styles from "../styles/Home.module.css";
+import Head from "../Components/HeadComponents/Head";
+import { useRef, useState } from "react";
+import { navColor } from "../types";
+import NavMenu from "../Components/MobileNav/NavMenu";
+import MobileNav from "../Components/MobileNav";
+import InitialScreen from "../Components/InitialScreen.tsx";
+import Utility from "../Components/Utility";
+import Team from "../Components/Team";
+import Roadmap from "../Components/Roadmap";
 
 const Home: NextPage = () => {
-  const [width, setWidth] = useState(1080);
+  const [navColor, setNavColor] = useState<navColor>("black");
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  useEffect(() => {
-    setWidth(global.innerWidth);
-    const handleResize = () => {
-      setWidth(global.innerWidth);
-    };
-
-    global.addEventListener("resize", handleResize);
-  }, []);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const utilityRef = useRef<HTMLDivElement>(null);
+  const teamRef = useRef<HTMLDivElement>(null);
+  const roadmapRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={styles.main}>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-ZS35CJ510Y"
+    <>
+      <Head />
+      <NavMenu
+        navColor={navColor}
+        isNavOpen={isNavOpen}
+        setIsNavOpen={setIsNavOpen}
+        utilityRef={utilityRef}
+        teamRef={teamRef}
+        roadmapRef={roadmapRef}
       />
-      <Script id="set-gtag">
-        {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());gtag('config', 'G-ZS35CJ510Y');`}
-      </Script>
-      <Head>
-        <title>Foundation NFT</title>
-        <meta
-          name="description"
-          content="NFT that allows little fish to swim alongside whales without being crushed."
+
+      <div
+        className="snap-y snap-mandatory h-screen w-screen overflow-y-auto"
+        ref={scrollRef}
+      >
+        <MobileNav
+          navColor={navColor}
+          isNavOpen={isNavOpen}
+          setIsNavOpen={setIsNavOpen}
+          setNavColor={setNavColor}
+          teamRef={teamRef}
+          scrollRef={scrollRef}
         />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {width > 900 ? (
-        <div className={styles.img_big}>
-          <Image
-            src="/Foundation_Logo_Full.svg"
-            alt="Foundation_Logo"
-            width={4076}
-            height={4076}
-          />
-        </div>
-      ) : (
-        <div className={styles.img_small}>
-          <Image
-            src="/Foundation_Logo_Symbol.svg"
-            alt="Foundation_Logo"
-            width={4076}
-            height={4076}
-          />
-        </div>
-      )}
-      <h1 className={styles.text}>Coming soon...</h1>
-    </div>
+
+        <InitialScreen />
+        <Utility utilityRef={utilityRef} />
+        <Team teamRef={teamRef} />
+        <Roadmap roadmapRef={roadmapRef} />
+      </div>
+    </>
   );
 };
 

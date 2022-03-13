@@ -1,0 +1,34 @@
+{
+  "0": {
+    "name": "Anton",
+    "position": "CEO / Co-founder",
+    "imageSrc": "/anton.jpg",
+    "imageWidth": 662,
+    "imageHeight": 993,
+    "description": "Graduate of the United States Air Force Academy. Over 6 years of sales and management experience in B2B, B2G & G2G. Throughout his career actively managed, planned and negotiated over 300M $."
+  },
+  "1": {
+    "name": "Dan",
+    "position": "CTO / Co-founder",
+    "imageSrc": "/dan.png",
+    "imageWidth": 180,
+    "imageHeight": 270,
+    "description": "Full-Stack developer with vast experience in building products from scratch to market release stage which generated over a million dollars in annual sales. Last 12 months focused on different blockchain ecosystems."
+  },
+  "2": {
+    "name": "Inimeg",
+    "position": "Community Manager",
+    "imageSrc": "/inimeg.jpg",
+    "imageWidth": 2045,
+    "imageHeight": 3067,
+    "description": "Digital nomad discovering new cities while working with hypergrowth startups in People Technology. Community Mod, Blockchain, Crypto & NFT enthusiast."
+  },
+  "3": {
+    "name": "Anastasia",
+    "position": "Artist",
+    "imageSrc": "/anastasia.jpg",
+    "imageWidth": 639,
+    "imageHeight": 958,
+    "description": " Artist - Illustrator and brand designer with 100+ completed, fully handmade projects across 12 different countries, for brands ranging from 5 to 800 employees."
+  }
+}

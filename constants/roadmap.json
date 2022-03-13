@@ -1,0 +1,30 @@
+{
+  "0": {
+    "timeFrame": "Q1 2022",
+    "objectives": [
+      "Hiring artists to create the art",
+      "Building the website",
+      "Developing the smart-contract for the NFT",
+      "Creating Discord"
+    ]
+  },
+  "1": {
+    "timeFrame": "Q2 2022",
+    "objectives": [
+      "NFT Minting",
+      "Community decides what platform tokens to buy and how many",
+      "Start staking in order to get access to IGOs",
+      "Opening the full website functionality for NFT holders",
+      "Invitesting 5% into a project to be later aidropped to the entire community",
+      "Announcing partnerships"
+    ]
+  },
+  "2": {
+    "timeFrame": "Q3 2022+",
+    "objectives": [
+      "Access to TA analysts with a multi-year track record, that will each actively manage a portfolio, in which you can invest.",
+      "NFT Investment Fund for blue-chip projects voted by the community",
+      "Secret Announcement"
+    ]
+  }
+}
