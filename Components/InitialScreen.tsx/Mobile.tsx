@@ -2,7 +2,7 @@ import React from "react";
 import ArrowDown from "../ArrrowDown";
 import LogoSymbol from "../LogoSymbol";
 
-const InitialScreen = () => {
+const MobileInitialScreen = () => {
   return (
     <div className="bg-white h-screen w-screen snap-start">
       <div className="max-w-sm mx-auto pt-28 w-32 md:36">
@@ -24,4 +24,4 @@ const InitialScreen = () => {
   );
 };
 
-export default InitialScreen;
+export default MobileInitialScreen;

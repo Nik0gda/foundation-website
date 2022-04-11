@@ -7,7 +7,7 @@ import {
   TEAM_MEMBERS_COUNT,
 } from "../../constants/constants";
 
-const Team = ({ teamRef }: { teamRef: RefObject<HTMLDivElement> }) => {
+const MobileTeam = ({ teamRef }: { teamRef: RefObject<HTMLDivElement> }) => {
   const [scrollXTeam, setScrollXTeam] = useState(0);
   const [currentMemberId, setCurrentMemberId] = useState(0);
   const teamMembersRef = useRef<HTMLDivElement>(null);
@@ -15,6 +15,7 @@ const Team = ({ teamRef }: { teamRef: RefObject<HTMLDivElement> }) => {
   const teamGapRef = useRef<HTMLDivElement>(null);
 
   const teamMembersJSONParsed = teamMembersJSON as ITeamMembers;
+
   useEffect(() => {
     const handleScrollTeam = () => {
       if (!teamMembersRef.current) return;
@@ -31,11 +32,12 @@ const Team = ({ teamRef }: { teamRef: RefObject<HTMLDivElement> }) => {
     const { offsetLeft, scrollWidth } = teamMemberRef.current;
     const value = Math.round(
       (scrollXTeam -
-        offsetLeft / scrollWidth -
+        offsetLeft / (scrollWidth || 1) -
         teamGapRef.current.clientWidth +
         SCROLL_X_MAGIC_NUMBER) /
         scrollWidth
     );
+
     setCurrentMemberId(
       value < 0
         ? 0
@@ -85,4 +87,4 @@ const Team = ({ teamRef }: { teamRef: RefObject<HTMLDivElement> }) => {
   );
 };
 
-export default Team;
+export default MobileTeam;

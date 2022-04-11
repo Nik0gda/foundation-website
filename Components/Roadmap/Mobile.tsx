@@ -1,9 +1,13 @@
 import React, { RefObject, useEffect, useRef, useState } from "react";
 import { IRoadmap, ITeamMembers } from "../../types";
 import roadmapJSON from "../../constants/roadmap.json";
-import RoadmapText from "./RoadmapText";
+import RoadmapTextMobile from "./RoadmapTextMobile";
 
-const Roadmap = ({ roadmapRef }: { roadmapRef: RefObject<HTMLDivElement> }) => {
+const MobileRoadmap = ({
+  roadmapRef,
+}: {
+  roadmapRef: RefObject<HTMLDivElement>;
+}) => {
   const [scrollYRoadmap, setScrollYRoadmap] = useState(0);
   const [currentRoadmapSectionId, setCurrentRoadmapSectionId] = useState(1);
   const roadmapObjectivesRef = useRef<HTMLDivElement>(null);
@@ -68,7 +72,7 @@ const Roadmap = ({ roadmapRef }: { roadmapRef: RefObject<HTMLDivElement> }) => {
           {roadmapJSONParsed[currentRoadmapSectionId].timeFrame}
         </p>
       </div>
-      <RoadmapText
+      <RoadmapTextMobile
         roadmapObjectivesRef={roadmapObjectivesRef}
         currentRoadmapSectionId={currentRoadmapSectionId}
       />
@@ -76,4 +80,4 @@ const Roadmap = ({ roadmapRef }: { roadmapRef: RefObject<HTMLDivElement> }) => {
   );
 };
 
-export default Roadmap;
+export default MobileRoadmap;

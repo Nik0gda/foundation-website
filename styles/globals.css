@@ -20,3 +20,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+}
+
+svg #wheel {
+  animation: scroll ease-in 2s infinite;
+}

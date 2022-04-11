@@ -2,7 +2,7 @@ import React, { RefObject } from "react";
 import roadmapJSON from "../../constants/roadmap.json";
 import { IRoadmap } from "../../types";
 
-const RoadmapText = ({
+const RoadmapTextMobile = ({
   roadmapObjectivesRef,
   currentRoadmapSectionId,
 }: {
@@ -48,4 +48,4 @@ const RoadmapText = ({
   );
 };
 
-export default RoadmapText;
+export default RoadmapTextMobile;
