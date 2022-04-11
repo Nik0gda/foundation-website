@@ -57,7 +57,7 @@ const FullInitialScreen = ({
             {roadmapJSONParsed[currentRoadmapSectionId].timeFrame}
           </p>
         </div>
-        <div className="flex space-x-10 items-center mt-20 ml-32 top-0 h-60">
+        <div className="flex space-x-10 items-center mt-20 ml-32 h-60">
           <div className="flex flex-col space-y-3 my-auto w-min">
             {Object.keys(roadmapJSONParsed).map((key) => (
               <span

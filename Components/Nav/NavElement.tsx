@@ -18,7 +18,9 @@ const NavElement = ({
 }) => {
   return (
     <div
-      className={`mx-auto w-9/12 border-b border-${borderColor} border-opacity-10`}
+      className={`mx-auto w-9/12 border-b ${
+        borderColor == "black" ? "border-black" : "border-white"
+      } border-opacity-10`}
       onClick={() => {
         if (scrollTo) {
           scrollTo.current.scrollIntoView();
