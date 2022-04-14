@@ -24,23 +24,23 @@ const RoadmapTextMobile = ({
         ))}
       </div>
       <div
-        className="relative flex flex-col gap-40 my-auto h-80 w-9/12 snap-y snap-mandatory overflow-y-auto scrollbar-hide"
+        className="relative pl-5 flex flex-col gap-40 my-auto h-80 w-9/12 snap-y snap-mandatory overflow-y-auto scrollbar-hide"
         ref={roadmapObjectivesRef}
       >
         <div>
           <div className="shrink-0 h-60" />
         </div>
         {Object.keys(roadmapJSONParsed).map((key) => (
-          <div
+          <ul
             key={key}
-            className="snap-always snap-center shrink-0 first:pt-8 last:pb-8"
+            className="marker:text-white-bullets list-[circle] snap-always snap-center shrink-0 first:pt-8 last:pb-8"
           >
             {roadmapJSONParsed[parseInt(key)].objectives.map((objective, i) => (
-              <p key={i} className="font-roboto font-[350] text-lg">
+              <li key={i} className="font-roboto font-[350] text-lg">
                 {objective}
-              </p>
+              </li>
             ))}
-          </div>
+          </ul>
         ))}
         <div className="shrink-0 h-60" />
       </div>

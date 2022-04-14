@@ -72,7 +72,7 @@ const FullInitialScreen = ({
             ))}
           </div>
           <div
-            className={`md:w-[50ch] lg:w-[65ch] my-auto`}
+            className={`md:w-[50ch] lg:w-[65ch] my-auto space-y-2 `}
             style={{
               opacity: Number.isInteger(roadmapOpacity)
                 ? roadmapOpacity

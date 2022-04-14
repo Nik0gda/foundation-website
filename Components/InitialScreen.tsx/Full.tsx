@@ -126,7 +126,7 @@ const FullInitialScreen = ({
           </div>
         </div>
       </div>
-      <div className="fixed flex h-screen right-0 w-min md:mr-6 lg:mr-12 xl:mr-20">
+      <div className="fixed flex h-screen right-0 w-min md:mr-6 lg:mr-12 xl:mr-20 z-10">
         <div className="flex my-auto flex-col gap-y-8 ">
           <a href={TWITTER_LINK} target={"_blank"} rel="noreferrer">
             <Twitter color={socialsColorCode} id="twitter-nav-full" />{" "}

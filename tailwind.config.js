@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -10,6 +12,8 @@ module.exports = {
     colors: {
       white: "#F4F4F4",
       black: "#222226",
+      "white-bullets": "rgba(244, 244, 244, 0.3)",
+      slate: colors.slate,
     },
     extend: {},
   },
