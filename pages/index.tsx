@@ -1,22 +1,22 @@
-import type { NextPage } from "next";
-import Head from "../Components/HeadComponents/Head";
-import { useRef, useState } from "react";
-import { navColor } from "../types";
-import NavMenu from "../Components/Nav/NavMenu";
-import MobileNav from "../Components/Nav";
-import Utility from "../Components/Utility";
+import type { NextPage } from 'next';
+import Head from '../Components/HeadComponents/Head';
+import { useRef, useState } from 'react';
+import { navColor } from '../types';
+import NavMenu from '../Components/Nav/NavMenu';
+import MobileNav from '../Components/Nav';
+import Utility from '../Components/Utility';
 
-import FullRoadmap from "../Components/Roadmap/Full";
+import FullRoadmap from '../Components/Roadmap/Full';
 
-import FullInitialScreen from "../Components/InitialScreen.tsx/Full";
-import FullTeam from "../Components/Team/Full";
-import MobileInitialScreen from "../Components/InitialScreen.tsx/Mobile";
+import FullInitialScreen from '../Components/InitialScreen/Full';
+import FullTeam from '../Components/Team/Full';
+import MobileInitialScreen from '../Components/InitialScreen/Mobile';
 
-import MobileRoadmap from "../Components/Roadmap/Mobile";
-import MobileTeam from "../Components/Team/Mobile";
+import MobileRoadmap from '../Components/Roadmap/Mobile';
+import MobileTeam from '../Components/Team/Mobile';
 
 const Home: NextPage = () => {
-  const [navColor, setNavColor] = useState<navColor>("black");
+  const [navColor, setNavColor] = useState<navColor>('black');
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const scrollRefFull = useRef<HTMLDivElement>(null);
