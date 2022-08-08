@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         <FullTeam teamRef={teamRefFull} />
         <FullRoadmap roadmapRef={roadmapRefFull} scrollRef={scrollRefFull} />
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden overflow-y-hidden">
         <NavMenu
           navColor={navColor}
           isNavOpen={isNavOpen}

@@ -21,12 +21,12 @@ const Head = () => {
 
         <meta
           name="og:image"
-          content="https://storage.googleapis.com/foundation-340108_cloudbuild/%20foundation_twitter-image.jpg"
+          content="https://storage.googleapis.com/foundation-349014_cloudbuild/_foundation_twitter-image.jpg"
         />
 
         <meta
           name="twitter:image"
-          content="https://storage.googleapis.com/foundation-340108_cloudbuild/%20foundation_twitter-image.jpg"
+          content="https://storage.googleapis.com/foundation-349014_cloudbuild/_foundation_twitter-image.jpg"
         />
 
         <meta name="twitter:site" content="@Foundation_NFT" />
